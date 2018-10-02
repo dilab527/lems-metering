@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">이름</th>
+            <th scope="col">계약전력</th>
+            <th scope="col">분류</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>            
+    {% for lems in lems_list %}
+        <tr>
+            <th scope="row">
+                {{ lems.ID }}
+            </th>
+            <td>
+                {{ lems.alias }}
+            </td>
+            <td>
+                {{ lems.contract_power }}
+            </td>
+            <td>
+                {{ lems.middle_classification }}
+            </td>
+            <td>               
+                <p class="mb-0">
+                    <a class="btn btn-sm btn-block btn-outline-primary"
+                        href="{% url 'devices' lems.ID %}">
+                        장비확인
+                    </a>
+                </p>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
