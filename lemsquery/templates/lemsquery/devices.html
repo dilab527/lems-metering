@@ -42,11 +42,28 @@
     </tbody>
 </table>
     <div class="row">
-    <label for="start" class="col-sm-2 col-form-label">시작</label>
+        <label class="col-sm-2 col-md-1 col-form-label" 
+            for="period">
+            주기
+        </label>
+        <div class="col">
+            <select class="form-control" id="period" name="period">
+                <option>no</option>
+                <option>1m</option>
+                <option>5m</option>
+                <option>15m</option>
+                <option>1h</option>
+                <option>1d</option>
+                <option>1w</option>
+                <option>1mo</option>
+                <option>1y</option>
+            </select>
+        </div>
+        <label for="start" class="col-sm-2 col-md-1 col-form-label">시작</label>
         <div class="col">
             <input class="form-control" id="start" name="start"/>
         </div>
-        <label for="end" class="col-sm-2 col-form-label">종료</label>
+        <label for="end" class="col-sm-2 col-md-1 col-form-label">종료</label>
         <div class="col">
             <input class="form-control" id="end" name="end"/>
         </div>
